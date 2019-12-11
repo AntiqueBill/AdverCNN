@@ -7,6 +7,10 @@ import numpy as np
 import h5py
 from DataSet import load_train
 
+
+# 加载数据
+train_loader = load_train('./data/train/train0.mat', 128)
+
 N = 62000  # 训练数据行数
 C = 3000
 classNum = 31
@@ -18,24 +22,6 @@ train_y = np.transpose(data['train_y'])
 print("train_x.shape:", train_x.shape)
 print("train_y.shape:", train_y.shape)
 
-# 预处理随机打乱
-index = np.arange(N)
-np.random.shuffle(index)
-train_x = train_x[index, :]
-train_y = train_y[index]
-
-# 转换为tensor
-train_X = torch.from_numpy(train_x)
-train_y = torch.from_numpy(train_y)
-
-train_X = train_X.reshape((N, 1, C))  # 1为通道数量， 3000为长度
-train_y = train_y.reshape((N, 1))
-print(train_X.shape)
-print(train_y.shape)
-
-# torch one_hot 类型转换
-train_y = train_y.long()
-train_y_onehot = torch.zeros(N, classNum).scatter_(1, train_y, 1)
 
 batch_size = 128
 nb_classes = 10
@@ -77,11 +63,8 @@ net.to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=momentum)
 
-# 加载数据
-train_loader = load_train('./data/train_channel.mat', 128)
 
 for epoch in range(2):  # loop over the dataset multiple times
-
     running_loss = 0.0
     for i, data in enumerate(train_loader, 0):
         # get the inputs; data is a list of [inputs, labels]
@@ -104,5 +87,5 @@ for epoch in range(2):  # loop over the dataset multiple times
 
 print('Finished Training')
 
-PATH = './cifar_net.pth'
+PATH = './VTCCNN.pth'
 torch.save(net.state_dict(), PATH)

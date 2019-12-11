@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df3285ba-8e1a-4a1f-a116-0b0b0a57b131" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AdverCNN.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AdverCNN.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VTCCNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/VTCCNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signal generation/signal_generation_train.m" beforeDir="false" afterPath="$PROJECT_DIR$/signal generation/signal_generation_train.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +57,25 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
+    <configuration name="DataSet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AdverCNN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataSet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="AdverCNN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +98,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.DataSet" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -108,7 +130,8 @@
       <workItem from="1575509679838" duration="7993000" />
       <workItem from="1575596925331" duration="3666000" />
       <workItem from="1575857599235" duration="3058000" />
-      <workItem from="1576049937592" duration="1369000" />
+      <workItem from="1576049937592" duration="1807000" />
+      <workItem from="1576054784114" duration="6990000" />
     </task>
     <servers />
   </component>
@@ -132,9 +155,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575509682690" />
-    <state x="1920" y="0" width="1596" height="728" key="dock-window-1" timestamp="1576049958612">
+    <state x="1920" y="0" width="1596" height="728" key="dock-window-1" timestamp="1576054795382">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1920" y="0" width="1596" height="728" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1576049958612" />
+    <state x="1920" y="0" width="1596" height="728" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1576054795382" />
   </component>
 </project>

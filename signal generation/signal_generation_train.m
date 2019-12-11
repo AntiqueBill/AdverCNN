@@ -1,4 +1,4 @@
-    %载频80到100MHZ， 采样频率40MHZ， 码元速率2M，FSK频间隔1MHZ，训练集每个2000个，测试集每个500个， -15dB到15dB
+ %载频80到100MHZ， 采样频率40MHZ， 码元速率2M，FSK频间隔1MHZ，训练集每个2000个，测试集每个500个， -15dB到15dB
 close all;
 clear all;
 clc;
@@ -84,10 +84,7 @@ for num_sample=1:N_sample
     yr=awgn(y,snr,'measured','db');
     yr=mapminmax(yr);
     mode5(num_sample,:)=[5,yr];    
-    
-
-    qam64(N_code,(8+2*rand(1))*1e7,fs,fd,Ac)
-    
+      
     y=ask2(N_code,(8+2*rand(1))*1e7,fs,fd,Ac) + fsk2(N_code,(8+2*rand(1))*1e7,fs,fd,freqsep,Ac);
     yr=awgn(y,snr,'measured','db');
     yr=mapminmax(yr);
@@ -255,7 +252,7 @@ valid_y=[mode1(N_train+1:end,1);mode2(N_train+1:end,1);mode3(N_train+1:end,1);mo
     mode26(N_train+1:end,1);mode27(N_train+1:end,1);mode28(N_train+1:end,1);mode29(N_train+1:end,1);mode30(N_train+1:end,1);mode31(N_train+1:end,1)];
 
 disp(strcat('saving',32, fdata,'.mat...'))
-save(strcat('../train/',fdata),'train_x','train_y','valid_x', 'valid_y', '-v7.3')
+save(strcat('../data/',fdata),'train_x','train_y','valid_x', 'valid_y', '-v7.3')
 
 clear train_x train_y valid_x valid_y
 end
